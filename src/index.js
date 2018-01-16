@@ -6,15 +6,6 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-import About from './components/About';
-
-ReactDOM.render(
-  <Router>
-    <div>
-      <Route path="/" component={App}/>
-      <Route path="/about" component={About}/>
-    </div>
-  </Router>
-  ,
-  document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
