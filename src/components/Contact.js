@@ -8,7 +8,11 @@ export default class Contact extends Component {
       <div className="panel panel-primary">
         <div className="panel-heading">{details.lastName}, {details.firstName}</div>
         <div className="panel-body">
-          {details.address}
+          <ul>
+            <li>{details.address}</li>
+            <li>{details.phone}</li>
+            <li>{details.mail}</li>
+          </ul>
         </div>
         <button className="btn btn-danger">Delete</button>
       </div>
