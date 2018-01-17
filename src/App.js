@@ -4,7 +4,10 @@ import Header from './components/Header';
 import AddContactForm from './components/AddContactForm';
 import Contact from './components/Contact';
 
-class App extends Component {
+import { contactsRef } from './base';
+import firebase from 'firebase/app';
+
+export default class App extends Component {
   constructor() {
     super();
     this.addContact = this.addContact.bind(this);
@@ -17,7 +20,7 @@ class App extends Component {
     const contacts = {...this.state.contacts};
     const timestamp = Date.now();
     contacts[`contact-${timestamp}`] = contact;
-    this.setState({ contacts });
+    contactsRef.push(contact);
   }
 
   render() {
@@ -35,5 +38,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

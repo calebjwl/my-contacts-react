@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "firebase": "^4.8.2",
+    "re-base": "^3.2.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
